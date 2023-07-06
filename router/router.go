@@ -46,6 +46,7 @@ func (r routes) UrlShortner(rg *gin.RouterGroup) {
 }
 
 func ClientRoutes() {
+
 	r := routes{
 		router: gin.Default(),
 	}

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"time"
+	"urlshortner/types"
 
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -21,6 +22,7 @@ var Mgr Manager
 
 type Manager interface {
 	Insert(interface{}, string) (interface{}, error)
+	GetUrlFromCode(string, string) (types.UrlDb, error)
 }
 
 func ConnectDb() {
